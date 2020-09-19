@@ -16,14 +16,14 @@ namespace EFCore
 
                 // Read
                 Console.WriteLine("Querying for a Vote");
-                var blog = db.Votes
+                var PermissionStatus = db.Votes
                     .OrderBy(b => b.VoterId)
                     .First();
 
                 // Update
                 Console.WriteLine("Updating the Votes and adding a Vote");
-                blog.Url = "https://devblogs.microsoft.com/dotnet";
-                blog.PermissionId.Add(
+                PermissionStatus.Url = "https://devblogs.microsoft.com/dotnet";
+                PermissionStatus.PermissionId.Add(
                     new PermissionStatus
                     {
                         Title = "Hello World",
@@ -33,8 +33,9 @@ namespace EFCore
 
                 // Delete
                 Console.WriteLine("Delete the Votes");
-                db.Remove(blog);
+                db.Remove(PermissionStatus);
                 db.SaveChanges();
             }
+        }
     }
 }
