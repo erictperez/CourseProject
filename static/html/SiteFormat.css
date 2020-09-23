@@ -1,9 +1,8 @@
 ﻿body {
-    background-color: black; 
-    text-decoration-color: white;
+    background-color: lightblue; 
 }
 .container {
-    background-color: #ff0000;
+    background-color: #808080 ;
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;
@@ -11,7 +10,6 @@
 h1 {
     text-align: left;
     text-decoration: underline;
-    text-decoration-color: white;
     padding-left: 250px;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -34,7 +32,6 @@ h3 {
 #page-header {
     text-decoration: none;
     padding-bottom: 1rem;
-    border-bottom: solid 5px black;
     margin-bottom: 1.8rem;
 }
 .table-end-padding {
