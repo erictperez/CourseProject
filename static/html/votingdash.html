@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Voting Dashboard</title>
+
+    <link href="SiteFormat.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color:aqua;">
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="VoteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div id="ModalDialog" class="text-center">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header" id="ModalHeader">
+                    <button type="button" class="close" data-dismiss="modal" data-target="#VoteModal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">lose</span>
+                    </button>
+                    <h1 class="modal-title">Vote</h1> <h4> Be bright, vote for what is right! </h4>
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs" role="tablist" id="VoteTab">
+                        <li class="active"><a href="#Voter" role="tab">Voter</a> </li>
+                        <li> <a href="#President" role="tab">President</a> </li>
+                        <li> <a href="#VicePresident" role="tab">Vice President</a> </li>
+                        <li> <a href="#Senator" role="tab">Senator</a> </li>
+                    </ul>
+                </div>
+                <!-- Body -->
+                <div class="modal-body" id="ModalBody">
+                    <div class="tab-content">
+                        <!-- User Account -->
+                        <div class="tab-pane fade in active" id="Voter">
+                            <br> <br>
+                            <form class="center form" id="form-vote" method="post" action="javascript: addVoter();">
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <label class="control-label" for="votersName">Voter's Name:</label>
+                                        <input name="votersName" id="votersName" value="" type="text" class="form-control" placeholder="Voter's Name">
+                                    </div> <br>
+                                </div> <br>
+                                <button name="submit" id="vote" value="" type="submit" class="btn btn-primary btn-block">Proceed</button>
+                            </form>
+                        </div>
+                        <!-- President -->
+                        <div class="tab-pane fade" id="President">
+                            <br> <br>
+                            <form class="center form" id="form-votepresident" method="post" action="javascript: votePresident();">
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <label class="control-label" for="presidentName">President:</label>
+                                        <select class="form-control" name="presidentName" id="presidentName">
+                                            <option value="President Candidate 1">President Candidate 1</option>
+                                            <option value="President Candidate 2">President Candidate 2</option>
+                                            <option value="President Candidate 3">President Candidate 3</option>
+                                            <option value="President Candidate 4">President Candidate 4</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <button name="submit" id="votepresident" value="" type="submit" class="btn btn-primary btn-block">Vote President</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Vice President -->
+                        <div class="tab-pane fade" id="VicePresident">
+                            <br> <br>
+                            <form class="center form" id="form-votevicepresident" method="post" action="javascript: voteVicePresident();">
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <label class="control-label" for="vicepresidentName">Vice President:</label>
+                                        <select class="form-control" name="vicepresidentName" id="vicepresidentName">
+                                            <option value="Vice President Candidate 1">Vice President Candidate 1</option>
+                                            <option value="Vice President Candidate 2">Vice President Candidate 2</option>
+                                            <option value="Vice President Candidate 3">Vice President Candidate 3</option>
+                                            <option value="Vice President Candidate 4">Vice President Candidate 4</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <button name="submit" id="votevicepresident" value="" type="submit" class="btn btn-primary btn-block">Vote Vice President</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Senator -->
+                        <div class="tab-pane fade" id="Senator">
+                            <br> <br>
+                            <form class="center form" id="form-votesenator" method="post" action="javascript: voteSenator();">
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <label class="control-label" for="senatorName1">Senator 1:</label>
+                                        <select class="form-control" name="senatorName1" id="senatorName1">
+                                            <option value="Senator Candidate 1">Senator Candidate 1</option>
+                                            <option value="Senator Candidate 2">Senator Candidate 2</option>
+                                            <option value="Senator Candidate 3">Senator Candidate 3</option>
+                                            <option value="Senator Candidate 4">Senator Candidate 4</option>
+                                            <option value="Senator Candidate 5">Senator Candidate 5</option>
+                                            <option value="Senator Candidate 6">Senator Candidate 6</option>
+                                            <option value="Senator Candidate 7">Senator Candidate 7</option>
+                                            <option value="Senator Candidate 8">Senator Candidate 8</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div class="controls">
+                                        <label class="control-label" for="senatorName2">Senator 2:</label>
+                                        <select class="form-control" name="senatorName2" id="senatorName2">
+                                            <option value="Senator Candidate 1">Senator Candidate 1</option>
+                                            <option value="Senator Candidate 2">Senator Candidate 2</option>
+                                            <option value="Senator Candidate 3">Senator Candidate 3</option>
+                                            <option value="Senator Candidate 4">Senator Candidate 4</option>
+                                            <option value="Senator Candidate 5">Senator Candidate 5</option>
+                                            <option value="Senator Candidate 6">Senator Candidate 6</option>
+                                            <option value="Senator Candidate 7">Senator Candidate 7</option>
+                                            <option value="Senator Candidate 8">Senator Candidate 8</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div class="controls">
+                                        <label class="control-label" for="senatorName3">Senator 3:</label>
+                                        <select class="form-control" name="senatorName3" id="senatorName3">
+                                            <option value="Senator Candidate 1">Senator Candidate 1</option>
+                                            <option value="Senator Candidate 2">Senator Candidate 2</option>
+                                            <option value="Senator Candidate 3">Senator Candidate 3</option>
+                                            <option value="Senator Candidate 4">Senator Candidate 4</option>
+                                            <option value="Senator Candidate 5">Senator Candidate 5</option>
+                                            <option value="Senator Candidate 6">Senator Candidate 6</option>
+                                            <option value="Senator Candidate 7">Senator Candidate 7</option>
+                                            <option value="Senator Candidate 8">Senator Candidate 8</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div class="controls">
+                                        <label class="control-label" for="senatorName4">Senator 4:</label>
+                                        <select class="form-control" name="senatorName4" id="senatorName4">
+                                            <option value="Senator Candidate 1">Senator Candidate 1</option>
+                                            <option value="Senator Candidate 2">Senator Candidate 2</option>
+                                            <option value="Senator Candidate 3">Senator Candidate 3</option>
+                                            <option value="Senator Candidate 4">Senator Candidate 4</option>
+                                            <option value="Senator Candidate 5">Senator Candidate 5</option>
+                                            <option value="Senator Candidate 6">Senator Candidate 6</option>
+                                            <option value="Senator Candidate 7">Senator Candidate 7</option>
+                                            <option value="Senator Candidate 8">Senator Candidate 8</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <button name="submit" id="votesenator" value="" type="submit" class="btn btn-primary btn-block">Vote Senators</button>
+                                </div>
+                            </form>
+                            <div id="Success" class="panel-collapse collapse">
+                                <div class="panel-body" id="PanelBody">
+                                    <p id="target"> </p>
+                                    <div class="row">
+                                        <div class="alert alert-success" role="alert">
+                                            <strong>Great!</strong> Voting is successful
+                                        </div>
+                                    </div>
+                                    <form class="form-success" action="javascript: successvote();" role="form">
+                                        <button class="btn btn-primary btn-block" type="submit">Finish</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ResultModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" id="ModalDialog">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header" id="ModalHeader">
+                    <button type="button" class="close" data-dismiss="modal" data-target="#ResultModal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">lose</span>
+                    </button>
+                    <h1 class="modal-title">Results</h1> <h4> Win or Lose. Do it fairly.</h4>
+                </div>
+                <!-- Body -->
+                <div class="modal-body" id="ModalBody">
+                    <form class="center form" id="form-getresults" method="post" action="javascript: getResults();">
+                        <div class="control-group">
+                            <div class="controls">
+                                <h3><label class="control-label" for="position">Political Position:</label></h3>
+                                <select class="form-control" name="position" id="position">
+                                    <option value="president">President</option>
+                                    <option value="vicepresident">Vice President</option>
+                                    <option value="senator">Senators</option>
+
+                                </select>
+                            </div>
+                            <br>
+                            <button name="submit" id="getresults" value="" type="submit" class="btn btn-primary btn-block">View Results</button>
+                        </div>
+                    </form>
+
+                    <div id="Results" class="panel-collapse collapse">
+                        <div class="panel-body" id="PanelBody">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <label class="control-label" for="rank1">Name</label>
+                                    <div class="alert alert-success" role="alert"> <p id="rank1"></p> </div>
+                                    <div class="alert alert-warning" role="alert"> <p id="rank2"></p> </div>
+                                    <div class="alert alert-success" role="alert"> <p id="rank3"></p> </div>
+                                    <div class="alert alert-warning" role="alert"> <p id="rank4"></p> </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="control-label" for="vote1">Votes</label>
+                                    <div class="alert alert-success" role="alert"> <p id="vote1"></p> </div>
+                                    <div class="alert alert-warning" role="alert"> <p id="vote2"></p> </div>
+                                    <div class="alert alert-success" role="alert"> <p id="vote3"></p> </div>
+                                    <div class="alert alert-warning" role="alert"> <p id="vote4"></p> </div>
+                                </div>
+                            </div>
+                            <form class="form-success" action="javascript: successview();" role="form">
+                                <button class="btn btn-primary btn-block" type="submit">Got it!</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="Carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" id="CarouselInner">
+            <div class="item active" id="CarouselOne">
+                <div class="crop">
+                    <img src="pictures/vote.jpg">
+                </div>
+                <div class="carousel-caption">
+                    <h1> What are you waiting for? </h1>
+                    <p class="lead"> Exercise your right to vote! </p>
+                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#VoteModal" href="#VoteModal">Vote</button>
+                </div>
+            </div>
+            <div class="item" id="CarouselTwo">
+                <div class="crop">
+                    <img src="pictures/results.jpg">
+                </div>
+                <!-- Login Collapse -->
+                <div class="carousel-caption">
+                    <h1> Done voting? </h1>
+                    <p class="lead"> View the real-time result. </p>
+                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#ResultModal" href="#ResultModal">View Result</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#Carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#Carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+
+
+</body>
+</html>
