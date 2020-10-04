@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head class="container">
+    <title>VoterRank</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css" />
+    <script language="javascript" type="text/javascript">alert("Welcome to VoterRank & Thank You for Visiting!")</script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="col-3" id="page-navigation">
+                <ul class="list-group">
+                    <a asp-controller="Home" asp-action="Index"><li class="list-group-item">Main</li></a>
+                    <a asp-controller="Home" asp-action="GetStarted"><li class="list-group-item">Get Started</li></a>
+                    <a asp-controller="Home" asp-action="SignIn"><li class="list-group-item">Sign In Here</li></a>
+                    <a asp-controller="Home" asp-action="FAQ"><li class="list-group-item">FAQs</li></a>
+                </ul>
+            </nav>
+
+        </div>
+        @RenderBody()
+    </div>
+
+</body>
+
+</html>
